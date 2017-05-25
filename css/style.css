@@ -1,0 +1,190 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+textarea,
+input[type="number"],
+select,
+input[type="date"] {
+  font-size: 13px;
+  color: #767676;
+  padding: 10px 12px;
+  background-color: #fdfdfd;
+  border: 1px solid #e3e3e3 !important;
+  outline: 0;
+  border-radius: 0px !important;
+  box-shadow: none;
+  border-radius: 0.5em !important;
+}
+input[type="checkbox"] {
+  margin-top: 0.5em;
+}
+.pull {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 400ms, visibility 400ms;
+  transition: opacity 400ms, visibility 400ms;
+}
+.push {
+  visibility: visible;
+  opacity: 1;
+}
+.container {
+  width: 100vw;
+}
+.input-group {
+  width: 100%;
+  text-align: left;
+}
+label {
+  color: #777;
+  font-weight: lighter;
+  padding: 0.5em 0;
+  font-size: 16px;
+}
+h1,
+h2 {
+  font-size: 20px;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 2em 0;
+}
+p {
+  font-size: 18px;
+}
+.helpdiv {
+  padding: 0px;
+}
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+ul {
+  list-style: none;
+}
+.navbar-default {
+  background-color: #fff;
+}
+.navbar-default .navbar-brand img {
+  height: 250%;
+}
+.navbar-default .navbar-nav li {
+  margin: 0 1em;
+}
+.navbar-default .navbar-nav .this .fa-circle {
+  color: #003b54;
+}
+.navbar-default .navbar-nav .btn-nav {
+  background-color: transparent;
+  border: none;
+  padding: 0.6em;
+}
+.titlecrud {
+  margin-top: 1em;
+}
+.panelleft .cargo {
+  background-color: rgba(0,59,84,0.7);
+  padding: 1em;
+}
+.panelleft .cargo h1 {
+  color: #fff;
+}
+.panelleft .cargo p {
+  margin: 1em;
+  color: #e5e5e5;
+}
+.panelleft .cargo input {
+  margin: 0.25em 0;
+}
+.panelleft .message {
+  background: url("../img/sede.jpg");
+  background-size: cover;
+  color: #fff;
+  height: 9em;
+}
+.panelleft .message .transparent {
+  background-color: rgba(0,59,84,0.7);
+  padding: 0.2em;
+}
+.panelleft .message .transparent p {
+  margin: 0;
+}
+.crud h1 {
+  margin: 0;
+  margin-top: 0.2em;
+}
+.crud .table td,
+.crud .table th {
+  font-size: 0.7em;
+  text-align: center;
+}
+.crud .table .smallcamp {
+  width: 5em;
+}
+.crud .table .delete {
+  color: #f00;
+  border-color: #fff;
+  margin: -0.5em;
+}
+.crud .table tr:last-child {
+  margin-top: 3em;
+}
+.crud .btn-add {
+  color: #fff;
+  background-color: #003b54;
+}
+.crud .list .btn {
+  width: 3em;
+}
+.crud .list div {
+  font-size: 0.9em;
+}
+.crud .list .row {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.results td,
+.results th {
+  font-size: 0.6em !important;
+}
+.resultstable {
+  padding: 1em 8em;
+}
+.resultstable .mth {
+  text-align: left !important;
+}
+.next,
+.forward {
+  background-color: #003b54;
+  color: #fff;
+  position: absolute;
+}
+.next:hover,
+.forward:hover {
+  background-color: rgba(0,59,84,0.9);
+  color: #fff;
+}
+.next {
+  bottom: 2em;
+  right: 2em;
+}
+.forward {
+  bottom: 2em;
+  left: 26em;
+}

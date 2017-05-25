@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.valorca.com/ValorWeb/web/imgs/favicon.ico">
+    <title>Lista de actividades</title>
+
+    <!--       CSS       -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--     Fuentes     -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!--       JS        -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://www.valorca.com/ValorWeb/web/"><img src="img/logo.png" alt="LogoGrupoValor"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="li01" class="this">
+                        <button type="button" name="button" id="btn01" class="btn-nav">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-list fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </button>
+                    </li>
+                    <li id="li02">
+                        <button type="button" name="button" id="btn02" class="btn-nav">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </button>
+                    </li>
+                    <li id="li03">
+                        <button type="button" name="button" id="btn03" class="btn-nav">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-bar-chart fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="col-md-3 col-sm-3 col-xs-12 panelleft">
+            <section class="cargo">
+                <div id="listcargo" class="push">
+                    <div class="row">
+                        <h1 class="col-md-10 titlecrud">Cargo</h1>
+                    </div>
+                    <form action="index.html" method="post">
+                        <div class="form-group">
+                            <input type="text" name="cargo" class="form-control" placeholder="Cargo">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="area" class="form-control" placeholder="&Aacute;rea">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="horas" class="form-control" placeholder="Horas laborales al mes">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="horas" class="form-control" placeholder="D&iacute;as laborales al mes">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>% Improductividad</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="row pull" id="othercargo">
+                    <h1 class="col-md-10 titlecrud">Datos del cargo</h1>
+                    <p>Cargo: Gerente</p>
+                    <p>&Aacute;rea: Technology</p>
+                    <p>160 horas laborales al mes.</p>
+                    <p>20 d&iacute;as laborales al mes.</p>
+                </div>
+            </section>
+            <section class="message">
+                <div class="transparent">
+                    <p class="text-center">
+                        El grupo, el valor
+                        <img src="img/logo-blanco.png" alt="LogoGrupoValor">
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12 ">
+            <div class="crud">
+                <div id="list" class="push">
+                    <div class="row">
+                        <h1 class="col-md-10 titlecrud">Lista de actividades</h1>
+                    </div>
+                    <hr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Actividad</th>
+                                <th>Tipo</th>
+                                <th>S1</th>
+                                <th>S2</th>
+                                <th>S3</th>
+                                <th>S4</th>
+                                <th>Frecuencia</th>
+                                <th>Nro/veces</th>
+                                <th>Tiempo</th>
+                                <th>Acci&oacute;n</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Correos</td>
+                                <td>Administrativa</td>
+                                <td>120</td>
+                                <td></td>
+                                <td>120</td>
+                                <td></td>
+                                <td>Quincenal</td>
+                                <td class="smallcamp">2</td>
+                                <td class="smallcamp">60</td>
+                                <td>
+                                    <button type="button" name="delete" class="btn btn-default delete">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <form class="" action="index.html" method="post">
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" name="descripcion" class="form-control" value="Describa la actividad">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option>Seleccione...</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="checkbox" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option>Seleccione...</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="smallcamp">
+                                        <div class="form-group">
+                                            <input type="number" name="veces" class="form-control" placeholder="Veces">
+                                        </div>
+                                    </td>
+                                    <td class="smallcamp">
+                                        <div class="form-group">
+                                            <input type="number" name="tiempo" class="form-control" placeholder="Horas">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-add">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </button>
+                                    </td>
+                                </form>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="results" class="pull">
+                    <div class="row">
+                        <h1 class="col-md-10 titlecrud">Resultados</h1>
+                    </div>
+                    <hr>
+                    <table class="table results">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Actividad</th>
+                                <th>Frecuencia</th>
+                                <th>Nro/veces</th>
+                                <th>Tiempo*Unidad</th>
+                                <th>S1</th>
+                                <th>S2</th>
+                                <th>S3</th>
+                                <th>S4</th>
+                                <th>Mes</th>
+                                <th>%</th>
+                                <th>%Acum</th>
+                                <th>Clasif</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Administrativas</td>
+                                <td>Correos</td>
+                                <td>Quincenal</td>
+                                <td>2</td>
+                                <td>60</td>
+                                <td>120,00</td>
+                                <td></td>
+                                <td>120,00</td>
+                                <td></td>
+                                <td>240,00</td>
+                                <td>11,76%</td>
+                                <td>11,76%</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <td>Operativas</td>
+                                <td>Proyectos</td>
+                                <td>Quincenal</td>
+                                <td>5</td>
+                                <td>180</td>
+                                <td></td>
+                                <td>900,00</td>
+                                <td></td>
+                                <td>900,00</td>
+                                <td>1800,00</td>
+                                <td>88,24%</td>
+                                <td>100,00%</td>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><strong>TOTAL</strong></td>
+                                <td>2.040,00</td>
+                                <td>0,10</td>
+                                <td>0,75</td>
+                                <td>0,10</td>
+                                <td>0,75</td>
+                                <td>0,43</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="resultstable">
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>S1</th>
+                                    <th>S2</th>
+                                    <th>S3</th>
+                                    <th>S4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="mth">Tiempo contratado:</th>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                </tr>
+                                <tr>
+                                    <th class="mth">Tiempo improductivo %total: 10,00%</th>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                </tr>
+                                <tr>
+                                    <th class="mth">Tiempo disponible:</th>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                </tr>
+                                <tr>
+                                    <th class="mth">%ocupaci&oacute;n: 0,04</th>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                    <td>0,01</td>
+                                </tr>
+                                <tr>
+                                    <th class="mth">Horas Laborales: 10</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="graphs" class="pull">
+                    <div class="row">
+                        <h1 class="col-md-10 titlecrud">Gr&aacute;ficos</h1>
+                    </div>
+                    <hr>
+                    <canvas id="line-chart" width="100px" height="100px"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="forward01" class="btn btn-add forward pull">
+        <i class="fa fa-caret-left fa-lg"></i> Regresar
+    </button>
+    <button id="forward02" class="btn btn-add forward pull">
+        <i class="fa fa-caret-left fa-lg"></i> Regresar
+    </button>
+    <button id="next01" class="btn btn-add next push">
+        Siguiente <i class="fa fa-caret-right fa-lg"></i>
+    </button>
+    <button id="next02" class="btn btn-add next pull">
+        Siguiente <i class="fa fa-caret-right fa-lg"></i>
+    </button>
+    <button id="next03" class="btn btn-add next pull">
+        <i class="fa fa-caret-left fa-lg"></i> Reiniciar
+    </button>
+</body>
+<script src="js/graph.js"></script>
+</html>
