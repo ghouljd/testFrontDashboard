@@ -1,26 +1,19 @@
+Chart.defaults.global.defaultFontFamily="'Raleway'";
+Chart.defaults.global.defaultFontSize=22;
 new Chart(document.getElementById("line-chart"), {
+
   type: 'line',
   data: {
-    labels: [0,2,4,6,8],
+    labels: [1,2,3,4],
     datasets: [{
-        data: [1,2,5,6],
-        label: "Semana 1",
-        borderColor: "#3e95cd",
+        data: [10,20,50,60],
+        label: "Tiempo disponible",
+        borderColor: "#FF9800",
         fill: false
       }, {
-        data: [2,2,5,8],
-        label: "Semana 2",
-        borderColor: "#8e5ea2",
-        fill: false
-      }, {
-        data: [0,2,4,6],
-        label: "Semana 3",
-        borderColor: "#3cba9f",
-        fill: false
-      }, {
-        data: [1,3,5,7],
-        label: "Semana 4",
-        borderColor: "#e8c3b9",
+        data: [20,20,50,80],
+        label: "Tiempo trabajado",
+        borderColor: "#64DD17",
         fill: false
       }
     ]
@@ -28,7 +21,7 @@ new Chart(document.getElementById("line-chart"), {
   options: {
     title: {
       display: true,
-      text: 'Tiempo trabajado por semana'
+      text: 'Tiempo trabajado vs Tiempo disponible por semana'
     }
   }
 });

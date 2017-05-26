@@ -201,4 +201,24 @@ $(document).ready(function(){
         $("#forward01").removeClass("pull");
         $("#forward01").addClass("push");
     });
+
+    $(window).scroll(function() {
+        if ($(window).width()<768 && $(window).scrollTop()>60) {
+            $("#menu").addClass("navbar-fixed-top");
+            $("#menu").addClass("backmenucolor");
+        }
+        else{
+            $("#menu").removeClass("navbar-fixed-top");
+            $("#menu").removeClass("backmenucolor");
+        }
+    });
+
+    if ($(window).width()<768) {
+        $("#next01").addClass("navbar-fixed-bottom");
+        $("#next02").addClass("navbar-fixed-bottom");
+        $("#next03").addClass("navbar-fixed-bottom");
+        $("#forward01").addClass("navbar-fixed-bottom");
+        $("#forward02").addClass("navbar-fixed-bottom");
+        $(".btnmessage").addClass("none");
+    }
 });
